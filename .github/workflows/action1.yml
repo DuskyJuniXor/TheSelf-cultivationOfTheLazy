@@ -19,7 +19,8 @@ jobs:
           run: |
             git config --global user.email "1171686724@qq.com"
             git config --global user.name "DuskyJuniXor"
+            git checkout -b sidepath
+            git fetch
             git checkout master
-            git pull origin master
-            git merge dev
+            git merge sidepath
             git push origin master 
