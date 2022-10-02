@@ -22,6 +22,6 @@ jobs:
             fi
         - id: case2
           run: |
-            if [ ${{./run.sh`}} == "TEST FAILED" ]
+            if [ ${{`./run.sh`}} == "TEST FAILED" ]
             then exit(1)
             fi
