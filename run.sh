@@ -5,7 +5,7 @@ val1=`./add 3 4`
 val2=`./add 5 6`
 val3=`./add 7 8`
 
-echo "if you can see this message in the master branch, then the .yml file is valid"
+echo "successful!"
 if [ $val1 -eq $[3+4] ] && [ $val2 -eq $[5+6] ]&& [ $val3 -eq $[7+8] ]
 then echo "TEST PASS"
 else echo "TEST FAILED"
