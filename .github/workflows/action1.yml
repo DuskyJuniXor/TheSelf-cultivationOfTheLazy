@@ -20,7 +20,7 @@ jobs:
             git add .
             git commit -m update -a
         - name: Merge branch
-          uses: actions/devmasx/merge-branch@1.4.0
+          uses: devmasx/merge-branch@1.4.0
           with:
               target_branch: master
               from_branch: dev
