@@ -21,7 +21,7 @@ jobs:
             git config --global user.email "1171686724@qq.com"
             git config --global user.name "DuskyJuniXor"
             git add .
-            git commit -m "newer version"
+            git commit -m update -a
             git switch master
             git merge dev
             git push -u origin master
