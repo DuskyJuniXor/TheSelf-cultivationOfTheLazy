@@ -25,4 +25,3 @@ jobs:
             git commit -m update -a
             git switch master
             git merge dev
-            git push -u origin master
