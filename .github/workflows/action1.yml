@@ -20,7 +20,6 @@ jobs:
             git clone https://github.com/DuskyJuniXor/TheSelf-cultivationOfTheLazy.git
             cd /home/runner/work/TheSelf-cultivationOfTheLazy/TheSelf-cultivationOfTheLazy
             git init
-            git branch
-            #git switch master
-            #git merge dev
-            #git push -u origin master
+            git switch master
+            git merge dev
+            git push -u origin master
