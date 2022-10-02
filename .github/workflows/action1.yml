@@ -4,24 +4,20 @@ jobs:
   myjob:
       runs-on: ubuntu-20.04
       steps:
-        - id: step1
-          uses: egor-tensin/setup-gcc@v1
-          with:
-            version: 9.4.0    
-        - id: step2
+        - name: install_gcc
           run: |
-            cd /TheSelf-cultivationOfTheLazy
-            chmod +x run.sh
-            bash run.sh
-#            echo "::set-output name=result::$(bash run.sh)"
-#        - id: case1
-#          if：contains($(run.sh), 'PASS')
-         - id: step3
-            run: |
-              git switch master
-              git merge dev
-              git push -u origin master
-#        - id: case2
-#          run: |
-#            if: `bash run.sh`
-#            run: exit(1)
+            sudo apt-get update
+            sudo apt-get install gcc
+        - name: Checkout
+          uses: actions/checkout@v2.4.2
+        - name: run_bash
+          run: bash run.sh
+        - name: add_commit_push
+          run: |
+            git config --global user.email "1171686724@qq.com"
+            git config --global user.name "DuskyJuniXor"
+            git switch dev
+            git add .
+            git commit -m update -a
+            git switch master
+            git merge dev
