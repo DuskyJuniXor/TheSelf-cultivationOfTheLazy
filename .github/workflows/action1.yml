@@ -13,9 +13,6 @@ jobs:
             sudo apt-get install gcc
         - name: automation
           run: |
-            mkdir ./git
-            cd git
-            git init
             git clone origin git@github.com:DuskyJuniXor/TheSelf-cultivationOfTheLazy.git
             git branch
             git switch master
