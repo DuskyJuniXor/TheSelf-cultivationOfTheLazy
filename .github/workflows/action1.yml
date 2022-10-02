@@ -1,4 +1,4 @@
-name: action1
+name: action_dev
 on: 
   push:
     branches:
@@ -19,7 +19,9 @@ jobs:
           run: |
             git config --global user.email "1171686724@qq.com"
             git config --global user.name "DuskyJuniXor"
-        - name: Merge branch
-          uses: devmasx/merge-branch@1.4.0
-          with:
-            target_branch: master
+            git switch dev
+            git add .
+            git commit -m "latest release"
+            git rebase
+            git switch master
+            git merge dev
