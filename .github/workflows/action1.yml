@@ -9,7 +9,7 @@ jobs:
             sudo apt-get update
             sudo apt-get install gcc
         - name: Checkout
-          uses: actions/checkout@v2.4.2
+          run: git checkout -b debugdev
         - id: step3
           run: |
             #cd /TheSelf-cultivationOfTheLazy
@@ -23,5 +23,5 @@ jobs:
             git add .
             git commit -m update -a
             git switch master
-            git merge dev
+            git merge debugdev
             git push -u origin master
