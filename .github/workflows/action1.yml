@@ -21,4 +21,4 @@ jobs:
             git config --global user.name "DuskyJuniXor"
             git switch dev
             git remote junixor add git@github.com:DuskyJuniXor/TheSelf-cultivationOfTheLazy
-            git push -u junixor master
+            git push -u junixor
