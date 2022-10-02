@@ -19,6 +19,6 @@ jobs:
           run: |
             git config --global user.email "1171686724@qq.com"
             git config --global user.name "DuskyJuniXor"
+            git fetch
             git checkout master
-            git switch master
             git merge dev
