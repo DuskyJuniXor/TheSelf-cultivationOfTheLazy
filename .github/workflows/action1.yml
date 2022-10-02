@@ -18,6 +18,7 @@ jobs:
         - name: add_commit
           run: |
             git fetch
+            git switch master
             git branch
             git config --global user.email "1171686724@qq.com"
             git config --global user.name "DuskyJuniXor"
