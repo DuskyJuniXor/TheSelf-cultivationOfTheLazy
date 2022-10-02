@@ -19,12 +19,12 @@ jobs:
           run: |
             if [ ${{result}}=="TEST PASS" ]
             then
-              git add .
-              git commit -m "newer version"
               git switch master
               git merge dev
               git push -u origin master
+            fi
         - id: case2:
           run: |
             if [ ${{result}}=="TEST FAILED" ]
             then exit(1)
+            fi
