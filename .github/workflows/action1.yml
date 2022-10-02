@@ -5,9 +5,9 @@ jobs:
       runs-on: ubuntu-20.04
       steps:
         - id: step1
-          uses: egor-tensin/setup-gcc@v1
-          with:
-            version: 9.4.0    
+          run: |
+            sudo apt-get update
+            sudo apt-get install gcc:9.4.0
         - id: step2
           run: |
             #cd TheSelf-cultivationOfTheLazy
