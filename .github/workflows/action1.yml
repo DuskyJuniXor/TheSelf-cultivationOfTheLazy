@@ -7,7 +7,7 @@ jobs:
         - id: step1
           run: |
             sudo apt-get update
-            sudo apt-get install gcc:9.4.0
+            sudo apt-get install gcc
         - id: step2
           run: |
             #cd TheSelf-cultivationOfTheLazy
