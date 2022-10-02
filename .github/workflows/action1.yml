@@ -8,15 +8,18 @@ jobs:
           run: |
             sudo apt-get update
             sudo apt-get install gcc
-        - id: step2
+        - name: Checkout
+          uses: actions/checkout@v2.4.2
+        - id: step3
           run: |
-            ls -l
             #cd /TheSelf-cultivationOfTheLazy
             #chmod +x run.sh
             bash run.sh
             #echo "::set-output name=result::$(bash run.sh)"
-        - id: step3
+        - id: step4
           run: |
+            git add .
+            git commit -m "newer version"
             git switch master
             git merge dev
             git push -u origin master
