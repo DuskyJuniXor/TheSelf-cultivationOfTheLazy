@@ -16,7 +16,7 @@ jobs:
             git config --global user.name "DuskyJuniXor"
             git config --global user.password "DY-20050206-dkj"
             git config --global user.password "1171686724@qq.com"
-            git clone git@github.com:DuskyJuniXor/TheSelf-cultivationOfTheLazy.git
+            git clone https://github.com/DuskyJuniXor/TheSelf-cultivationOfTheLazy.git
             git branch
             git switch master
             git merge dev
