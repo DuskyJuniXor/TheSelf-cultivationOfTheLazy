@@ -18,6 +18,8 @@ jobs:
             #echo "::set-output name=result::$(bash run.sh)"
         - id: step4
           run: |
+            git config --global user.email "1171686724@qq.com"
+            git config --global user.name "DuskyJuniXor"
             git add .
             git commit -m "newer version"
             git switch master
