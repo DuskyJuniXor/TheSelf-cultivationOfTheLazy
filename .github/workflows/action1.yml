@@ -19,7 +19,5 @@ jobs:
             git init
             git clone https://github.com/DuskyJuniXor/TheSelf-cultivationOfTheLazy.git
             cd /home/runner/work/TheSelf-cultivationOfTheLazy/TheSelf-cultivationOfTheLazy
-            git pull origin dev --allow-unrelated-histories
-            git checkout -b main
-            git merge dev
+            git fetch origin dev
             git push -u origin master
