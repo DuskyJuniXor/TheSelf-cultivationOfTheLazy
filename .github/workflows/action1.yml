@@ -10,20 +10,12 @@ jobs:
             version: 9.4.0    
         - id: step2
           run: |
-            cd /TheSelf-cultivationOfTheLazy
-            chmod +x run.sh
+            #cd TheSelf-cultivationOfTheLazy
+            #chmod +x run.sh
             bash run.sh
-            echo "::set-output name=result::$(bash run.sh)"
+            #echo "::set-output name=result::$(bash run.sh)"
         - id: case1
           run: |
-            if [ ${{result}} == "TEST PASS" ]
-            then
-              git switch master
-              git merge dev
-              git push -u origin master
-            fi
-        - id: case2
-          run: |
-            if [ ${{result}} == "TEST FAILED" ]
-            then exit(1)
-            fi
+            git switch master
+            git merge dev
+            git push -u origin master
