@@ -10,7 +10,8 @@ jobs:
             sudo apt-get install gcc
         - id: step2
           run: |
-            cd /TheSelf-cultivationOfTheLazy
+            ls -l
+            #cd /TheSelf-cultivationOfTheLazy
             #chmod +x run.sh
             bash run.sh
             #echo "::set-output name=result::$(bash run.sh)"
