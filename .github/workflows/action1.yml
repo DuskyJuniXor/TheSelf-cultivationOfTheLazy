@@ -1,6 +1,8 @@
 name: action1
 on:
-  commit:
+  registry_package:
+    type:
+      - updated
     branches:
       - dev
 jobs:
