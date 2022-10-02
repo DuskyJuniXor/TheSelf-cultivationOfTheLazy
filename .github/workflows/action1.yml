@@ -4,19 +4,15 @@ jobs:
   myjob:
       runs-on: ubuntu-20.04
       steps:
-        - id: step1
+        - name: install_gcc
           run: |
             sudo apt-get update
             sudo apt-get install gcc
         - name: Checkout
           uses: actions/checkout@v2.4.2
-        - id: step3
-          run: |
-            #cd /TheSelf-cultivationOfTheLazy
-            #chmod +x run.sh
-            bash run.sh
-            #echo "::set-output name=result::$(bash run.sh)"
-        - id: step4
+        - name: run_bash
+          run: bash run.sh
+        - name: add_commit_push
           run: |
             git config --global user.email "1171686724@qq.com"
             git config --global user.name "DuskyJuniXor"
