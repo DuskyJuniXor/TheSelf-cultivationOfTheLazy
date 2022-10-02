@@ -11,15 +11,13 @@ jobs:
           run: |
             sudo apt-get update
             sudo apt-get install gcc
-        - name: Checkout
-          uses: actions/checkout@v2.4.2
-        - name: run_bash
-          run: bash run.sh
-        - name: add_commit
+        - name: automation
           run: |
-            git config --global user.email "1171686724@qq.com"
-            git config --global user.name "DuskyJuniXor"
-            git pull origin master --allow-unrelated-histories
-            git checkout master
-            git branch dev
-            git push origin master --allow-unrelated-histories
+            mkdir ./git
+            cd git
+            git init
+            git clone origin git@github.com:DuskyJuniXor/TheSelf-cultivationOfTheLazy.git
+            git branch
+            git switch master
+            git merge dev
+            git push -u origin master
