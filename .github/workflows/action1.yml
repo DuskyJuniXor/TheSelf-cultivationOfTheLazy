@@ -20,4 +20,7 @@ jobs:
             git clone https://github.com/DuskyJuniXor/TheSelf-cultivationOfTheLazy.git
             cd /home/runner/work/TheSelf-cultivationOfTheLazy/TheSelf-cultivationOfTheLazy
             git fetch origin dev
+            git fetch origin master
+            git switch origin/master
+            git merge origin/dev
             git push -u origin master
