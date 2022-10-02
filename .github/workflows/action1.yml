@@ -20,7 +20,5 @@ jobs:
             git config --global user.email "1171686724@qq.com"
             git config --global user.name "DuskyJuniXor"
             git switch dev
-            git add .
-            git commit -m "latest release"
             git remote junixor add git@github.com:DuskyJuniXor/TheSelf-cultivationOfTheLazy
             git push -u junixor master
