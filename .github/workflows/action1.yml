@@ -25,4 +25,3 @@ jobs:
           uses: devmasx/merge-branch@1.4.0
           with:
             target_branch: master
-            from_branch: dev
