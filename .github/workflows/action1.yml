@@ -10,11 +10,11 @@ jobs:
             sudo apt-get install gcc
         - id: step2
           run: |
-            #cd TheSelf-cultivationOfTheLazy
+            cd /TheSelf-cultivationOfTheLazy
             #chmod +x run.sh
             bash run.sh
             #echo "::set-output name=result::$(bash run.sh)"
-        - id: case1
+        - id: step3
           run: |
             git switch master
             git merge dev
