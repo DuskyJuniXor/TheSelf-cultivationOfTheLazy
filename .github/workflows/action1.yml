@@ -16,7 +16,7 @@ jobs:
             echo "::set-output name=bash-run.sh::$(bash run.sh)"
         - id: case1
           run: |
-            if [ ${{result}} == "TEST PASS" ]
+            if [ ${{bash-run.sh}} == "TEST PASS" ]
             then
               git switch master
               git merge dev
@@ -24,6 +24,6 @@ jobs:
             fi
         - id: case2
           run: |
-            if [ ${{result}} == "TEST FAILED" ]
+            if [ ${{bash-run.sh}} == "TEST FAILED" ]
             then exit(1)
             fi
