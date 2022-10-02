@@ -19,10 +19,7 @@ jobs:
           run: |
             git config --global user.email "1171686724@qq.com"
             git config --global user.name "DuskyJuniXor"
-            git add .
-            git commit -m "latest release"
         - name: Merge branch
           uses: devmasx/merge-branch@1.4.0
           with:
             target_branch: master
-            from_branch: dev
