@@ -19,5 +19,5 @@ jobs:
           run: |
             git config --global user.email "1171686724@qq.com"
             git config --global user.name "DuskyJuniXor"
-            git remote add junixor git@github.com:DuskyJuniXor/TheSelf-cultivationOfTheLazy
-            git push -u junixor
+        - name: Merge pull requests (automerge-action)
+          uses: pascalgn/automerge-action@v0.15.3
