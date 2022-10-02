@@ -9,14 +9,10 @@ jobs:
           with:
             version: 9.4.0    
         - id: step2
-          run: |
-            chmod +x run.sh
-            bash run.sh
-          env: 
-            result: ${{`bash run.sh`}}
+          run: chmod +x run.sh
         - id: case1
           run: |
-            if [ ${{result}} == "TEST PASS" ]
+            if [ ${{`bash run.sh`}} == "TEST PASS" ]
             then
               git switch master
               git merge dev
@@ -24,6 +20,6 @@ jobs:
             fi
         - id: case2
           run: |
-            if [ ${{result}} == "TEST FAILED" ]
+            if [ ${{bash run.sh`}} == "TEST FAILED" ]
             then exit(1)
             fi
