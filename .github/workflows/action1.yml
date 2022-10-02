@@ -13,17 +13,15 @@ jobs:
             cd /TheSelf-cultivationOfTheLazy
             chmod +x run.sh
             bash run.sh
-            echo "::set-output name=result::$(bash run.sh)"
-        - id: case1
-          run: |
-            if [ ${{result}} == "TEST PASS" ]
-            then
+#            echo "::set-output name=result::$(bash run.sh)"
+#        - id: case1
+#          if：contains($(run.sh), 'PASS')
+         - id: step3
+            run: |
               git switch master
               git merge dev
               git push -u origin master
-            fi
-        - id: case2
-          run: |
-            if [ ${{result}} == "TEST FAILED" ]
-            then exit(1)
-            fi
+#        - id: case2
+#          run: |
+#            if: `bash run.sh`
+#            run: exit(1)
