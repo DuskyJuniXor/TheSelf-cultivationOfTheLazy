@@ -22,6 +22,6 @@ jobs:
             git switch dev
             git add .
             git commit -m "latest release"
-            git rebase
             git switch master
+            git pull
             git merge dev
