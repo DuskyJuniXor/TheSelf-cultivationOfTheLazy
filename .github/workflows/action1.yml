@@ -21,4 +21,4 @@ jobs:
             git config --global user.name "DuskyJuniXor"
             git fetch
             git checkout master
-            git merge dev--allow-unrelated-histories
+            git merge origin/dev
