@@ -1,4 +1,4 @@
-name: action1
+name: action_dev
 on: 
   push:
     branches:
