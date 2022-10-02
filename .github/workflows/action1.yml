@@ -22,5 +22,4 @@ jobs:
             git switch dev
             git add .
             git commit -m "latest release"
-            git remote add origin git@github.com:DuskyJuniXor/TheSelf-cultivationOfTheLazy
             git push -u origin master
