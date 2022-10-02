@@ -22,6 +22,4 @@ jobs:
             git switch dev
             git add .
             git commit -m "latest release"
-            git switch master
-            git pull
-            git merge dev
+            git push -u origin master
