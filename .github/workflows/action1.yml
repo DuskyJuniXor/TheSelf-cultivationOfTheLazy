@@ -12,9 +12,11 @@ jobs:
           run: |
             cd /TheSelf-cultivationOfTheLazy
             chmod +x run.sh
+            bash run.sh
+            echo "::set-output name=bash-run.sh::$(bash run.sh)"
         - id: case1
           run: |
-            if [ ${{`./run.sh`}} == "TEST PASS" ]
+            if [ ${{result}} == "TEST PASS" ]
             then
               git switch master
               git merge dev
@@ -22,6 +24,6 @@ jobs:
             fi
         - id: case2
           run: |
-            if [ ${{`./run.sh`}} == "TEST FAILED" ]
+            if [ ${{result}} == "TEST FAILED" ]
             then exit(1)
             fi
