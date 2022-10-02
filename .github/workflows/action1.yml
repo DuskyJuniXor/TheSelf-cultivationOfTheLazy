@@ -12,12 +12,15 @@ jobs:
           uses: actions/checkout@v2.4.2
         - name: run_bash
           run: bash run.sh
-        - name: add_commit_push
+        - name: add_commit_merge
           run: |
             git config --global user.email "1171686724@qq.com"
             git config --global user.name "DuskyJuniXor"
             git switch dev
             git add .
             git commit -m update -a
-            git switch master
-            git merge dev
+        - name: Merge branch
+          uses: actions/devmasx/merge-branch@1.4.0
+          with:
+              target_branch: master
+              from_branch: dev
