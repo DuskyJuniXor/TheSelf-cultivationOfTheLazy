@@ -22,6 +22,5 @@ jobs:
             git config pull.rebase false
             git push
             git pull origin master --allow-unrelated-histories
-            git branch
+            git checkout origin/master
             git push
-            git push -u origin master
