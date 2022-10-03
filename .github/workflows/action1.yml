@@ -20,6 +20,7 @@ jobs:
             git config --global user.email "1171686724@qq.com"
             git config --global user.name "DuskyJuniXor"
             git config pull.rebase false
+            git push
             git pull origin master --allow-unrelated-histories
-            git switch master
+            git checkout master
             git push
