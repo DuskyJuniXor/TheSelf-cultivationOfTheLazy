@@ -21,6 +21,6 @@ jobs:
             git config --global user.name "DuskyJuniXor"
             git config pull.rebase false
             git push
-            git pull origin master --allow-unrelated-histories
             git checkout master
+            git pull origin master --allow-unrelated-histories
             git push
