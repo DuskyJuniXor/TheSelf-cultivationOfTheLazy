@@ -24,7 +24,8 @@ jobs:
             git fetch origin master
             git checkout master
             git merge origin/dev
-        - name: GitHub Push
-          uses: ad-m/github-push-action@v0.6.0
-          with:
-            github_token: $\{{ secrets.GITHUB_TOKEN }}
+            remote_addr=`git remote get-url --push origin`
+            remote_addr=`echo $remote_addr|  awk -F'://' '{print $2}'`
+            remote_addr=https://${user_name}:${{ secrets.GITHUB_TOKEN }}@${remote_addr}
+            git remote add origin ${remote_addr}
+            git push origin HEAD --force
