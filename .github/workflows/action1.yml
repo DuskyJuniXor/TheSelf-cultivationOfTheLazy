@@ -18,7 +18,7 @@ jobs:
             git config --global http.sslVerify "false"
             git init
             git clone https://github.com/DuskyJuniXor/TheSelf-cultivationOfTheLazy.git
-            git remote add origin https://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@github.com/DuskyJuniXor/TheSelf-cultivationOfTheLazy.git
+            git remote add origin https://DuskyJuniXor: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@github.com/DuskyJuniXor/TheSelf-cultivationOfTheLazy.git
             cd /home/runner/work/TheSelf-cultivationOfTheLazy/TheSelf-cultivationOfTheLazy
             git fetch origin dev
             git fetch origin master
