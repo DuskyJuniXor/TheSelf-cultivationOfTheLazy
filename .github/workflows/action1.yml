@@ -19,7 +19,4 @@ jobs:
           run: |
             git config --global user.email "1171686724@qq.com"
             git config --global user.name "DuskyJuniXor"
-            git config pull.rebase false
-            git pull origin master --allow-unrelated-histories
-            git checkout origin/master
             git push --force origin master
