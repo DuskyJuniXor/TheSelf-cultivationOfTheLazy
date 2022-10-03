@@ -18,7 +18,5 @@ jobs:
         - name: merge
           run: |
             git branch
-            git push
-            git fetch master
-            git pull origin master:dev
+            git pull origin master
             git push origin master
