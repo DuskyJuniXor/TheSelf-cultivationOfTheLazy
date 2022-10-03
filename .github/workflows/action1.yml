@@ -11,27 +11,11 @@ jobs:
           run: |
             sudo apt-get update
             sudo apt-get install gcc
-        - name: automation
+        - name: Checkout
+          uses: actions/checkout@v2.4.2
+          with:
+            token: ${{ github.token }}
+        - name: merge
           run: |
-            git config --global user.name "DuskyJuniXor"
-            git config --global user.email "1171686724@qq.com"
-            git init
-            git clone https://github.com/DuskyJuniXor/TheSelf-cultivationOfTheLazy.git
-            SSHPATH="$HOME/.ssh"
-            rm -rf "$SSHPATH"
-            mkdir -p "$SSHPATH"
-            echo "${{ secrets.ACCESS_KEY }}" > "$SSHPATH/id_rsa"
-            chmod 600 "$SSHPATH/id_rsa"
-            sudo sh -c "echo StrictHostKeyChecking no >>/etc/ssh/ssh_config"
-            remote_addr=`git remote get-url --push origin`
-            domain=`echo $remote_addr|  awk -F'/' '{print $3}'`
-            user_org=`echo $remote_addr|  awk -F'/' '{print $4}'`
-            repo=`echo $remote_addr|  awk -F'/' '{print $5}'`
-            remote_addr=git@${domain}:${user_org}/${repo}.git
-            git remote add origin ${remote_addr}
-            cd /home/runner/work/TheSelf-cultivationOfTheLazy/TheSelf-cultivationOfTheLazy
-            git fetch origin dev
-            git fetch origin master
-            git checkout master
-            git merge origin/dev
-            git push origin HEAD --force
+            git branch
+         
