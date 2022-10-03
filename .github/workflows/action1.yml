@@ -20,6 +20,5 @@ jobs:
             git branch
             git push
             git checkout master
-            git pull 
-            git merge dev
+            git pull origin master:dev
             git push origin master
