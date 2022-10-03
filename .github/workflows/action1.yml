@@ -18,5 +18,6 @@ jobs:
         - name: merge
           run: |
             git branch
+            git config pull.rebase false
             git pull origin master
             git push origin master
