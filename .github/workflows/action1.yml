@@ -24,4 +24,7 @@ jobs:
             git fetch origin master
             git checkout master
             git merge origin/dev
-            git push -u origin master
+            - name: GitHub Push
+              uses: ad-m/github-push-action@v0.6.0
+              with:
+                github_token: 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
