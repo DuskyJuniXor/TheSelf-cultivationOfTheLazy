@@ -19,6 +19,6 @@ jobs:
           run: |
             git branch
             git push
-            git checkout -b master
+            git fetch master
             git pull origin master:dev
             git push origin master
