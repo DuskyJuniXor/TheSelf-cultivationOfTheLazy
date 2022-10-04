@@ -24,5 +24,6 @@ jobs:
             then
             git push origin dev:master -f
             git reset --hard origin/master
-            else exit(0)
+            else echo "TEST FAILED"
+            exit(0)
             fi
