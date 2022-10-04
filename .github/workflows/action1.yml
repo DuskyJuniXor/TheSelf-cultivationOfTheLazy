@@ -21,8 +21,9 @@ jobs:
             git config --global user.name "DuskyJuniXor"
             result=`bash run.sh`
             if ["$result" == "TEST PASS"]
-            then
-            git push origin dev:master -f
-            git reset --hard origin/master
-            else exit(0)
+              then
+                git push origin dev:master -f
+                git reset --hard origin/master
+            else
+                exit(0)
             fi
