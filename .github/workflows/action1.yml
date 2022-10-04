@@ -25,5 +25,5 @@ jobs:
                 git push origin dev:master -f
                 git reset --hard origin/master
             else
-                exit(0)
+                exit
             fi
