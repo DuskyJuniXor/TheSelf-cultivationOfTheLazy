@@ -17,8 +17,6 @@ jobs:
             token: ${{ github.token }}
         - name: merge&push
           run: |
-            git config --global user.email "1171686724@qq.com"
-            git config --global user.name "DuskyJuniXor"
             result=`bash run.sh`
             if [ "$result" == "TEST PASS" ]
               then
